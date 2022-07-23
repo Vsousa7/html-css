@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens flexíveis</title>
+</head>
+<body>
+    <h1>Adição de imagens flexíveis</h1>
+    <p>É muito importante que as imagens possam adaprtarem-se automaticamente às diferentes telas dos diferentes aparelhos. Para isso, elas precisam ter tamanhos diferentes e serem configuradas com as tags picture e source.</p>
+    <p>A seguir, será inserida uma imagem que se adaptará automaticamente aos diferentes tamanhos de telas.</p>
+    <picture>
+        <source media="(max-width: 755px)" srcset="imagens/paisagem-p.png" type="image/png">
+        <source media="(max-width: 1055px)" srcset="imagens/paisagem-m.png" type="image/png">
+        <img src="imagens/paisagem-g.png" alt="Imagem flexível">
+    </picture>
+</body>
+</html>

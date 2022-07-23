@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos em CSS</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        h1{
+            background-color:aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            text-align: justify;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+    </style>
+</head>
+<body">
+    <h1>Esilos Inline</h1>
+    <p>Os estilos inline não são muito recomendados se você vai precisar trabalhar com muitos códigos em body, pois eles são feitos de forma individual em cada código. Ou seja, estilo inline serve mais pra caso você queira configurar alguns códigos individualmente.</p>
+    <p>Os estilos são configurados com a tag &lt;style&gt;. Nela, vários parâmetros podem ser adicionados, como: "background-color", "text-aling", "font-size", "font-family", "font-color", etc.</p>
+    <p>Ou seja, quase todos os comandos de formatação e aparência de body podem ser configurados com style e seus parâmetros.</p>
+    <h2>Usando o Style</h2>
+    <p>Para usar o style em estilos inline, basta adicionar a tag style em algum código de body(h1,h2,h3,p,ol,etc.) que você queira configurar. Em seguida, use quais parâmetros usar em style e pronto.</p>
+    <h3>Mudando a cor de fundo</h3>
+    <p>Basta ir em body e adicionar &lt;style=background-color: xxxx;&gt;.</p>
+    <h3 style="color: crimson;">Mudando cor de títulos</h3>
+    <p>É só ir num título e adicionar &lt;style="color: xxx;"&gt;.</p>
+    <h1>Estilos locais/internos</h1>
+    <p>Estilos locais são recomendados para situações em que você irá trabalhar apenas com uma página. Eles são mais práticos que os inline, já que permitem separar a parte HTML de CSS.</p>
+    <p>Para usá-lo, basta adicionar a tag style em head. Depois, é só escolher em qual seletor (qual comando) irá configurar. Por exemplo: se escolher configurar os h1, todos os h1 do seu site vão ficar com a determinada configuração sem precisar ir em cada um deles individualmente.</p>
+    <p>Porém, caso você necessite configurar a aparência de diversas páginas, será necessário outra forma de estilo, porque o estilo interno deixa uma área muito grande em head e você terá de copiar e colar todas as configurações em todas as outras páginas.</p>
+</body>
+</html>

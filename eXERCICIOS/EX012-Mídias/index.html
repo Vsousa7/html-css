@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas</title>
+</head>
+<body>
+    <h1>Adaptação de imagens multimídia para multiplas telas</h1>
+    <p>O ideal não é trabalhar com o maior tamanho de imagem possível, isso pode gerar um site pesado e lento. É preciso ter diferentes tamanhos da mesma imagem para a adaptação delas a diferentes telas.</p>
+    <h2>Criando imagens de tamanhos diferentes</h2>
+    <h3>Imagem pequena</h3>
+    <p>Ela deve possuir 300 de largura por 300 de altura.
+        A resolução deve ser: resolução x: 80,000; resolução y: 80,000.
+    </p>
+    <p>Essa imagem pequena é para se <strong>adaptar à tela do celular</strong></p>
+    <h3>Imagem média</h3>
+    <p>Ela deve possuir altura e largura em 700; resolução x e resolução y em 80,000. Ela serve para adaptação à telas de tablet, por exemplo.</p>
+    <h3>Imagem grande</h3>
+    <p>Ela deve possuir largura e altura em 1000; resolução x e resolução y em 80,000. Ela serve para adaptação a telas de notebooks ou tevelevisão.</p>
+    <h2>Para que servem essas imagens?</h2>
+    <p>Elas são essenciais para que elas possam se adaptarem sozinhas às diferentes telas de aparelhos, além de serem essenciais para <strong>evitar a rotação lateral</strong>.</p>
+    <p>Pra usar essas imagens, será necessário usar a tag &lt;picture&gt;. <strong>Essa tag serve para que possam ser criados vários sources</strong>, várias fontes. Dentro dela, adiciona-se a tag &lt;img&gt;. Em cima da tag img, <strong>adiciona-se a tag &lt;source:media-type&gt;</strong>. Essa tag <strong>servirá para a adaptação automática da mída às diferentes telas</strong>. Ou seja, se minha tela é de no máximo 700px, é recomendável que no max-width seja colocado 1055px (assim, a imagem se adaptará aos diferentes tamanhos de tela). Feito isso, adiciona-se a imagem média em "srcset". E em "type", completa-se com "image/png". <strong>Isso seginfica que: o navegador irá carregar a foto grande, mas, se a tela for menos de 1055px, o navegador irá carregar a imagem média. E se a tela for menor ainda que 755px, é preciso criar outra source e adiconar a imagem pequena nela (lembrando que o max-width terá de ser 755).</strong></p>
+    <p>A ordem das tags source precisam ser assim: a tag img por último contendo a imagem grande, uma tag source para a imagem média; acima dessa, outra tag source para a imagem pequena. Pode-se fazer o caminho contrário também. O importante é manter a hierarquia de tamanhos.</p>
+    <p><strong>A base é a imagem padrão que você quer carregar (com o tamanho padrão que você quer). Acima dela é que são colocados os sources na ordem hierarquica (imagens menores que a padrão)</strong></p>
+    <picture>
+        <source media="(max-width: 755px)" srcset="imagens/pequena.png" type="image/png">
+        <source media="(max-width: 1055px)" srcset="imagens/média.png" type="image/png">
+        <img src="imagens/grande.png" alt="Imagem Grande">
+    </picture>
+    <h1>Adicionando Áudios</h1>
+    <p>Para adicionar áudios, é necessário ter em mente que eles também têm direitos autorais. Por isso, é preciso ir para fontes de áudios licenciados (o Youtube tem uma parte para isso) ou conseguir permissão para usar o áudio.</p>
+    <p>Há duas formas de adiconar áudios: uma forma simples, onde só vai ser importado em um formato (mp3, ogg, wav); a forma mais completa: alguns navegadores podem não suportar um tipo de áudio. Por essa razão, é preciso, muitas vezes, colocar o mesmo áudio em 3 formatos. Para isso, usa-se a tag &lt;source: media&gt;.</p>
+    <p>Tome cuidado com o tamanho do áudio também. Se for muito grande, tiver muitos megas, pode dar problema pro teu site.</p>
+    <h2>Forma simples de adicionar áudios</h2>
+    <p>Para reproduzir áudio, usa-se a tag &lt;audio&gt;, junto com os padrões "controls" e "autoplay".</p>
+    <audio src="midia/audio-yt.mp3" controls autoplay></audio>
+    <p>É importante lembrar que alguns navegadores podem não reproduzir o áudio nessa e na próxima forma de colocá-los. Se assim for, é preciso adicionar um link para o usuário baixar o seu áudio.</p>
+    <h2>Forma mais completa de adicionar áudios</h2>
+    <p>Como já dito, há muitos navegadores que não são compatíveis com determinado formato de áudio(mp3, ogg, wav). Por isso, é necessário usar a tag &lt;audio&gt; e dentro dessa tag (elimine o parametro source que abre em automatico) é adicionado o parametro "source: src". O "type" é completo com "audio/xxx(formato do áudio".</p>
+    <p>É importante lembrar que, para importar os 3 tipos de formato de áudio, é preciso ter esse mesmo áudio em 3 formatos diferentes (use um conversor pra isso).</p>
+    <p>Nessa tag, a ordem importa. Logo, o primeiro source de cima pra baixo será o primeiro que o navegador irá tentar reproduzir. Caso não consiga, ele irá para o segundo source e assim por diante.</p>
+    <audio preload="metadata" controls autoplay>
+       <source src="midia/kids.mp3" type="audio/mpeg">
+       <source src="midia/audio-yt.ogg" type="audio/ogg">
+       <source src="midia/audio-yt.wav" type="audio/wav">
+    </audio>
+    <h3>Parametro na tag audio</h3>
+    <p>
+        <ul>
+            <li>Preload</li>
+            <ul>
+                <li>Auto: é o padrão da tag. Ao usá-lo, o navegador só vai concluir que seu site terminou de carregar depois que o áudio tiver carregado também. Isso não é muito recomendável.</li>
+                <li>Metadata: só carrega algumas informações sobre o áudio.</li>
+                <li>None: não carrega nada do áudio, só quando o usário clica nele.</li>
+            </ul>
+        </ul>
+    </p>
+    <p>O mais indicado é o metadata, acompanhado dos parametros "controls" e "autoplay". Há o "loop" também, caso você queira que o áudio fique repeteindo.</p>
+</body>
+</html>

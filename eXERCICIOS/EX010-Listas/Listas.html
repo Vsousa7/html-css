@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+   <h1>Trabalhando Com Listas</h1> 
+   <h2>Listas ordenadas</h2> <!--São aquelas em que a ordem faz diferença-->
+  <p>Existe um tag chamada &lt;ol&gt; que faz uma lista ordenada (ordened list). Dentro da tag, cada ítem da lista é colocada entre a tag &lt;li&gt;, que significa list iten. Além disso, caso necessite personalizar a lista, pode-se usar o padrão "type" dentro de ol e escolher se a lista vai ser ordenada com números, letras, etc. Pode-se, ainda, escolher a partir de qual número/letra a lista vai iniciar utilizando a opção "start" depois de type.</p>
+  <ol type="I" start="1">
+<li>Acordar</li>
+<li>Tomar café</li>
+<li>Banhar</li>
+<li>Ler</li>
+  </ol>
+  <h2>Lista não ordenadas</h2>
+  <p>São as que não precisam de ordenação, de sequenciação. Usa-se a tag &lt;ut&gt;, que significa "unorded list". Pode-se também configurar a personalização usando o padrão "type" dentro de "ul" e escolhendo qual tipo de símbolo que vai ser usado na lista. Os tipos são "circle, disk e square". </p>
+  <ul type="disk">
+      <li>Comprar arroz</li>
+      <li>Comprar feijão</li>
+      <li>Tomate</li>
+      <li>Banana</li>
+      <li>Frango</li>
+  </ul>
+  <h2>Prática</h2>
+  <ol type="i">
+      <li>Acordar</li>
+      <li>Banhar</li>
+      <li>Tomar café</li>
+      <li>Ler</li>
+      <li>Jogar</li>
+      <li>Almoçar</li>
+      <li>Descansar</li>
+      <li>Estudar</li>
+      <li>Lanchar</li>
+      <li>Olhar as redes sociais</li>
+      <li>Estudar</li>
+      <li>Assistir um pouco</li>
+      <li>Dormir</li>
+  </ol type="disk">
+  <h3>Compras a fazer</h3>
+  <ul>
+      <li>Roupas</li>
+      <li>Arroz</li>
+      <li>Frango</li>
+      <li>feijão</li>
+      <li>Sapatos</li>
+      <li>Sei lá, não tenho nem dinheiro</li>
+  </ul>
+
+  <h2>Listas Mistas</h2>
+<p>São meio que junções entre listas. É colocar uma lista dentro de outra lista. Por exemplo, é possível fazer uma lista e colocar outra lista (subtópicos) dentro de cada item. Basta adicionar uma nova "ol" dentro de "li"</p>
+<ol>
+    <li>Vingadores novos favoritos</li>
+    <ol type="a">
+        <li>Pantera Negra</li>
+        <li>Homem Formiga</li>
+        <li>Wanda</li>
+    </ol>
+    <li>Vingadores antigos favoritos</li>
+    <ol type="a" start="5"><!--O número 5 foi adicionado, mesmo o type sendo em letras, porque esse comando de start só reconhece em número. Logo, colocou-se o 5 pelo fato de o "e" ser o quinto elemento do alfabeto: a,b,c,d,e,f,g,h...Mas, dar sequencia a ordem dos elementos entre as duas listas é opcional.-->
+        <li>Homem de Ferro</li>
+        <li>Thor</li>
+        <li>Hulck</li>
+    </ol>
+    <p>Além disso, pode-se misturar uma "ol" com uma "ul". </p>
+    <ol>
+        <li>Iphone</li>
+        <ul type="disk">
+            <li>Camera ótima</li>
+            <ol type="a">
+                <li>Fotos muito boas</li>
+                <li>Melhor qualidade de vídeos</li>
+            </ol>
+            <li>Gravar tela sem precisar de outro app</li>
+            <ol type="a">
+                <li>Facilidade e agilidade com gravação de tela</li>
+            </ol>
+        </ul>
+        <li>Android</li>
+        <ul type="disk">
+            <li>Apps crackeados</li>
+            <ol type="a">
+                <li>Não precisar gastar tanto com apps pagos</li>
+                <li>Ter apps sem anúncios</li>
+            </ol>
+            <li>Variedade de jogos grátis</li>
+            <ol type="a">
+                <li>Não precisar pagar por um jogo qualquer que queira jogar</li>
+                <li>Encontrar jogos pagos de graça</li>
+                <li>Não precisa comprar armazenamento</li>
+                <li>Pode-se até expandir o armazenamento de graça em alguns celulares</li>
+            </ol>
+                
+        </ul>
+    </ol>
+</ol>
+<h2>Listas de Definição</h2>
+<p>Ela funciona como se fosse um dicionário. Ela é literalmente uma lista de termos e definições. Para isso, usa-se a tag &lt;dl&gt; para a criação da lista. Dentro de "dl", coloca-se os termo através da tag &lt;dt&gt; e, dentro de "dt", coloca-se as definições através da tag &lt;dd&gt;. Ela dá valor semântico para o arquivo e auxília o site a ser encontrado quando algúem estiver pesquisando por uma definição. Ela pode ser configurada em CSS para melhorar a aparência.</p>
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd>
+</dl>
+
+</body>
+</html>

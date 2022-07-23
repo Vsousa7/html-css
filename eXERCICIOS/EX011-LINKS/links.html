@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <h2>O que são os links externos</h2>
+    <p>Links externos são links que vão apontar para outros sites, que vão te levar para algum site no momento em que você clica no texto com link.</p>
+    <p>Exemplo: você pode acessar meu <a href="https:/gustavoguanabara.github.io/">repositório público no Github</a>. A tag &lt;a&gt; vem de "âncora". Em "hypertext reference" coloca-se a url do site.</p>
+    <p>Vou colocar agora um link para o canal no YouTube do <a href="https://www.youtube.com/c/Tolezuandooficial/">Tolezuando</a>.</p>
+    <h2>Adicionando links externos sem o navegador sobrepor seu site</h2>
+    <p>Na forma anterior de adição de link externo, ao clicar no link, o navegador sobrepõe o site externo ao nosso site. Isso faz com que as pessoas provavelmente nunca mais voltem ao nosso site. Por isso, é necessário usar alguns parâmetros na tag "a" para fazer com que o navegador abra o link externo em outra aba.</p>
+    <p>Para isso, faz-se assim: você vai clicar no link do canal do <a href="https://www.youtube.com/c/Tolezuandooficial/" target="_blank" rel="external">Tolezuando</a> e o navegador vai abrir em outra aba.
+    A função "target" é um tipo de alvo; a função "_blank" é uma janela em branco; e a função "rel" significa "relativo à". Logo, toda essa função significa que o link externo vai ter um alvo em _blank, e o link vai ser aberto em outra janela. Mas o "rel" é algo mais novo. Nem sempre é necessário.</p>
+    <h3>Prática</h3>
+    <p>Para praticar, vou adicionar vários links externos aqui usando uma lista.</p>
+    <ul>
+        <li><a href="https://www.youtube.com/c/VoiceMakers/" target="_blank" rel="external">Voice Makers</a></li>
+        <ul>
+            <li>Meu vídeo preferido do VoiceMakers é o <a href="https://www.youtube.com/watch?v=_f-_bRy7mxU/" target="_blank" rel="external">TITÃ DE SOCAGEM</a>.</li>
+        </ul>
+        <li><a href="https://stars.chromeexperiments.com/" target="_blank" rel="external">100.000 Stars</a></li>
+        <li><a href="https://lifeat.io/" target="_blank" rel="external">LifeAt Spaces</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank" rel="external">Curso em Vídeo</a></li>
+    </ul>
+    <h2>Usando links internos</h2>
+    <p>Eles fazem ligação, relação com uma página que está dentro do nosso servidor e diz respeito a nossa prórpia página. Com isso, para ter um link interno é necessário ter um outra página. Crie ela no mesmo lugar onde cria o index.</p>
+    <p>Esta é a primeira página do site. A seguir, estará o link para a <a href="pg002.html" rel="next">segunda página do site</a>. Para uma página que faz parte do meu servidor, do meu site por completo, não precisa de link. Precisa apenas que <strong>minhas outras páginas estejam salvas na mesma pasta onde minha página princial (index) está</strong>.</p>
+    <p>O "rel" em links externos usa uma função diferente. Nele, temos que adicionar a função "next" (que indica um avanço para uma próxima página. Nesse caso, indica a segunda página) e "prev" (que indica uma página anterior). Essa função serve para escolher qual será a próxima página e, assim, o Google não vai definir isso por você.</p>
+    <h2>Adicionando páginas de subpastas</h2>
+    <p>É a mesma função. O único detalhe é que a pasta onde estará suas outras páginas precisa estar dentro da pasta da página principal (index).</p>
+    <p>A seguir, estará minha terceira página, a <a href="Noticias/pag003.html" target="_self" rel="next">página de notícias</a>.</p>
+    <p>Sobre o target: ter ele ou não em links internos não faz muita diferença, já que não é recomendado que todas as suas páginas sejam abertas em outras abas. Porém, se quiser usaá=lo, pode-se usar um comando para que ele possa continuar abirndo suas páginas na mesma aba. É só adicionar o "_self" </p>
+    hw
+    <h2>Adicionando links para download</h2>
+    <p>É preciso que a pasta onde se localiza o arquvio para download esteja no mesmo local da pasta onde está o index. A partir disso, usa-se a mesma tag para os outros links, mas com outras configurações.</p>
+    <ul>
+        <li><a href="Arquivo/01 - História da Internet.pdf" download="01 - História da Internet.pdf" type="aplication/pdf">Baixar arquivo em pdf.</a></li>
+    </ul>
+    <p>O padrão "download" é usado para fazer com que o navegador solicite diretamente um download sem precisar abri-lo por cima da página. Alguns navegadores (como o Chrome" não reconhecem essa função. Já outros sim.</p>
+    <p>Quando o arquivo for muito grande, você pode compactá-lo para um melhor download.</p>
+    <ul>
+        <li><a href="Arquivo/favicon_io (1).zip" download="favicon_io (1).zip" type="aplication/zip">Baixar o arquivo em zip.</a></li>
+    </ul>
+
+</body>
+</html>

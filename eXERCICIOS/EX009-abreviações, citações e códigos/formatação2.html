@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abreviações, citações e códigos</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Código Fonte</h2>
+    <p>São os códigos de programação. Para uma melhor leitura, suas letras precisam ocupar o mesmo espaço, ou seja, ter fontes monoespaçadas. Para isso, usa-se a tag <code>&lt;code&gt;</code></p>
+    <p>Para códigos muito grandes (como os do Phyton), é necessário colocar a tag CODE dentro da tag <code>&lt;pre&gt;</code> para deixar o código com as devidas identizações. Ex: <pre><code>
+>>> complex(0, 0)</code></pre>
+    Tudo o que estiver dentro de PRE vai ser considerado com suas quebras de linha, idetinzações, etc. Ela não é a mais correta, mas é uma tag de pré-formatação.</p>
+    <h2>Citações</h2>
+    <p>Como diria o grande filósofo Piton: <q>tudo o que você faz na vida é pra comer alguém</q>. Essa citação, o acréscimos das aspas, foi fetia utilizando a tag <code>&lt;q&gt;</code>. Para citações assim pequenas, essa tag é bem recomendada. Ela é utilizada para dar sentido semâncitco no HTML. Ou seja, ela é usada para indicar ao navegado que o que está entre ela é uma citação. Ela não é decorativa.</p>
+    <h2>Cirações completas</h2>
+    <p>Há também citações que são mais longas. Para isso, usa-se a tag &lt;blockquote&gt;. Ex: Segundo Mantoan (2002, pg. 2):
+        <blockquote>
+            “Entre a fundação desse Instituto e os dias de hoje, a história da educação especial no Brasil foi se estruturando, seguindo quase sempre modelos que primam pelo assistencialismo, pela visão segregativa e por uma segmentação das deficiências, fato que contribui ainda mais para que a formação escolar e a vida social das crianças e jovens com deficiência aconteçam em um mundo à parte”.
+        </blockquote>
+        <p>Se essa citação tiver um link, pode-se adicioná-lo usando o padrão "cite="xxxxx" dento de blockquote. Isso é essencial para uma citação mais completa e para que os navegadores consigam identificar melhor seu site e as citações.</p>
+        <h2>Abreviações (ou sigla)</h2>
+        <p>Para fazer com que os navegadores identifiquem, semanticamente, que determinada palavra é uma silga/abreviação, é preciso adicionar a tag &lt;abbr&gt; entre a palavra abreviada. Ex: <abbr title="HyperText Markup Language">HTML</abbr>. A função title na tag serve para colocar o significado da sigla/abreviação.</p>
+        <h2>Texto invertido</h2>
+        <p>A tag &lt;bdo&gt; serve para inverter um texto. Ex: <bdo dir="rtl">se você leu até aqui é pq é g4y</bdo>.</p>
+    </p>
+</body>
+</html>

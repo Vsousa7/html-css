@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas</title>
+    <style>
+        @font-face {
+            font-family: 'Vampire';
+            src: url('fonts/Vampire Wars Italic.otf') format('Opentype'), url('fonts/Vampire Wars Italic.ttf') format('Truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        h1{
+            font-family:'Vampire', Times, serif ;
+            font-size: 3em;
+            font-weight: normal;
+        }
+        h2{
+            font-family: 'Vampire', 'Times New Roman', Times, serif;
+            font-size: 2em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usando fontes externas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio obcaecati, mollitia fugit provident pariatur eos architecto, ea nulla nobis quia doloremque ipsum beatae minus veritatis sunt non amet vitae! Mollitia.</p>
+    <h2>Formatos de fontes</h2>
+    <p>Para adiconar uma fonte baixada, é necessário criar uma regra(@) chamada "font-face". Nela, importaremos as fontes preenchecno as configurações "font-family" (coloca o nome da fonte" e "url"(origem da fonte). É importante destacar que na url, é necessário escrever o nome da fonte obedecendo criteriosamente o nome que está no arquivo baixado (até os espaços e pontuações). Pode-se adicionar mais de uma url, visto que é necessário colocar os diversos formatos das fontes, pois alguns navegadores podem não ser compatíveis com um determinado formato.</p>
+    <p>Os formatos das fontos são:</p>
+    <ul>
+        <li>Opentype: otf</li>
+        <li>Truetype: ttf</li>
+        <li>Embedded-opentype</li>
+        <li>Truetype-aat (Aplle Advanced Typograph)</li>
+        <li>OBS: Existem fontes otf que podem ser ttf.</li>
+    </ul>
+    <p>Saber qual é o tipo da fonte é importante para que o padrão "format" da regra font-face possa ser preenchido corretamente. Depois, é só configurar o font-weigth e font-syle como normal. Configra o font-wigth nos h também caso fofr adicionar a fonte baixada neles.</p>
+    <p>OBS: COLOQUE OS NOMES DAS FONTES NA URL E O NOME DOS FORMATOS EM FORMAT ENTRE ASPAS ('XXXXX')</p>
+</body>
+</html>

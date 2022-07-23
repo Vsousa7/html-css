@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospedagem de vídeos</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>São vídeos que ficam hospedados no seu próprio servidor.</p>
+    <p>A forma mais simples é usando a tag &lt;video&gt; e adicionando o vídeo em "scr". É importante redimensionar a largura do tamanho que você desejar usando o parâmetro width. Em seguida, use o parâmetro "controls" para adicionar os botões de reprodução no navegador.</p>
+    <video src="videos/Production Id 4044010.mkv" width="600" controls></video>
+    <h2>Forma mais completa</h2>
+    <p>Assim como nos áudios, alguns navegadores podem não suportar alguns formatos de vídos (mp4, m4v, mkv, webm, ogv). Por isso, é importante que seu site hospede um vídeo com seus diversos formatos (use um conversor para isso).</p>
+    <p>Pra isso, usa-se a mesma lógica de adicionar áudios: tag &lt;video&gt;, coloca "source:src" e insere o vídeo em seus diversos formatos, segundo a ordem que você quer que o navegador tente abrir (se quiser, colocar primeiro o vídeo com o menor tamanho em bytes).</p>
+    <p>Na tag video, use o parâmetro "controls". Lembre de utilizar o width também.</p>
+    <p>Além disso, para adicionar uma capa ao vídeo, basta inserir o parâmetro "poster" na tag video. OBS: a imagem para a capa precisa estar em png.</p>
+    <video width="600" poster="cap/party.jpg" controls autoplay loop>
+        <source src="videos/Production Id 4044010.webm" type="video/webm">
+        <source src="videos/Production Id 4044010.mkv" type="video/mkv">
+        <source src="videos/Production Id 4044010.m4v" type="video/m4v">
+    </video>
+    <h3>O problema da Hospedagem de vídeos no próprio servidor</h3>
+    <p>Hospedar vídeos no prórprio servidor demandar uma grande quantidade de tráfego de downloads: se muitas pessoas acessam o site, muitos serão os downloads feitos no vídeo, e, por consequencia, seu site irá consumir muitos gigas e você irá pagar muito mais por isso. Logo, hospedar vídeos no próprio servidor não é muito recomendado. Seu cliente precisa estar ciente disso.</p>
+    <h2>Incorporação de vídeos externos ao nosso servidor</h2>
+    <p>Há como adicionar vídeos a partir de sites que hospedam vídeos, como o Youtube. No YT, pode-se escolher um vídeo, clicar em "compartilhar" e em "incorporar". Essa opção de incorporar já te dá um próprio códeigo GTML para você só copiar e usar.</p>
+    <p>Com isso, é só configurar os detalhes que você quiser, tipo largura e altura. Ou não configura. Tanto faz. Como exemplo, fique com essa animação:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CAYDRIbXFAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Porém, o Youtube não te dá a possibilidade de escolher a privacidade dos seus vídeos(se seu site é privado, por exemplo, e só quem pode assistir aos seus vídeos são os assinantes).</p>
+    <p>Para isso, é preciso outros sites de hospedagem de vídeos. O Vimeo é uma opção. Mas o algoritmo dele não é tão bom quanto o do YT, ou seja, o vídeo pode travar um pouco a depender da internet do usuário. E ele é pago para hospedar vídeos.</p>
+    <iframe src="https://player.vimeo.com/video/701028600?h=64c6a6d2e6&loop=1&portrait=0" width="640" height="347" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/701028600">Toomas Beneath the Valley of the Wild Wolves</a> from <a href="https://vimeo.com/chintislundgren">Chintis Lundgren</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+</body>
+</html>
