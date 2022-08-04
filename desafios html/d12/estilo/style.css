@@ -12,45 +12,35 @@
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --font2: 'Passion One', cursive;
     --font3: 'Sriracha', cursive;
-
 }
 
 html, body{
-    font-family: var(--fonte1);
+    margin: 0px;
+    padding: 0px;
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte1);
+
 }
 
 header{
     background-color: black;
     color: white;
+    min-height: 100px;
+    padding: 10px;
     text-align: center;
 }
-
 header>h1{
     font-family: var(--font2);
-    padding-top: 50px;
-    font-variant: small-caps;
     font-size: 10vw;
+    padding-top: 30px;
+    font-variant: small-caps;
 }
-
 header>p{
-    padding-bottom: 50px;
+    color: white;
+    padding-bottom: 30px;
+    font-family: var(--fonte1);
 }
-
-section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
-    font-family: var(--font3);
-    font-size: 3.5vw;
-}
-
-section>p{
-    padding-bottom: 2em;
-}
-
 a{
     color: white;
     text-decoration: none;
@@ -60,37 +50,54 @@ a:hover{
     text-decoration: underline;
 }
 
+section{
+    font-family: var(--font3);
+    font-size: 3.5vh;
+    line-height: 2em;
+    padding-left: 30px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
 section.normal{
     background-color: white;
-    color: black;
+}
+section.normal>p{
+    padding-left: 7px;
+    padding-bottom: 20px;
 }
 
 section.imagem{
-    background-color: rgb(52, 51, 51);
+    background-color: darkgray;
     color: white;
-    background-size: cover;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.651);
-    background-attachment: fixed;
 }
 
 section.imagem>p{
-    background-color: rgba(0, 0, 0, 0.548);
+    background-color: rgba(0, 0, 0, 0.63);
     display: inline-block;
     padding: 5px;
     text-shadow: 2px 2px 0px black;
 }
 
-section#img01{
+section#img1{
     background-image: url('../imagens/background001.jpg');
+    background-size: cover;
     background-position: right center;
+    background-attachment: fixed;
+    box-shadow: inset 5px 5px 13px 0px black;
 }
 
-section#img02{
+section#img2{
     background-image: url('../imagens/background002.jpg');
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+    box-shadow: inset 5px 5px 13px 0px rgba(0, 0, 0, 0.747);
 }
+
 footer{
     background-color: black;
-    text-align: center;
-    color: white;
     padding: 10px;
+    color: white;
+    text-align: center;
 }
