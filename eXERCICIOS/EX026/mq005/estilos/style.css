@@ -47,6 +47,10 @@ menu > ul > li > a:hover{
     background-color: grey;
 }
 
+menu > ul > li > a:active{
+    background-color: lightgray;
+}
+
 main{
     width: 90vw;
     background-color: white;
