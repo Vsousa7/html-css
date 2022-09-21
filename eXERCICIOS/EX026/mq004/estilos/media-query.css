@@ -2,3 +2,77 @@
 
 /* Configurações para todas as demais medias */
 
+/* Typical Device Breakpoints
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: de 768px até 992px
+Desktop: de 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media print{
+
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main{
+        border: 2px solid black;
+        width: 70vw;
+    }
+
+    main h1{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main::after{
+        content: 'Essa impressão foi feita através do site do Curso em Vídeo';
+        text-decoration: overline;
+    }
+
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#print{ display: block;}
+    img#desk{ display: none;}
+    img#gscreen{ display: none;}    
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) /* Para Tablet*/{
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone{ display: none;}
+    img#tablet{ display: block;}
+    img#print{ display: none;}
+    img#desk{ display: none;}
+    img#gscreen{ display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#print{ display: none;}
+    img#desk{ display: block;}
+    img#gscreen{ display: none;}
+}
+
+@media screen and (min-width:1200px){
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main{
+        width: 800px;
+    }
+
+    img#phone{ display: none;}
+    img#tablet{ display: none;}
+    img#print{ display: none;}
+    img#desk{ display: none;}
+    img#gscreen{ display: block;}
+}
